@@ -3,13 +3,18 @@ console.log(document);                                                          
 
 let todos = [];                                                                         // En tom array
 
-const buttonElem = document.querySelector("#add-to-do-button");                         // Letar upp add-to-do id elementet i html.
+const buttonElem = document.querySelector("#add-to-do-button");                          // Letar upp add-to-do id elementet i html.
+const todolist = document.querySelector("#todoList");                       
 console.log(buttonElem);
 
-function displayTodos() {                                                               //
+function displayTodos() { 
+    let todoItems = "";
+    
     for(let i = 0; i < todos.length; i++) {                                              //
         console.log("Todo nr: ", i);                                                     //
-        console.log("Todo: ", todos[i]);                                                 //
+        console.log("Todo: ", todos[i]); 
+        todoItems = todoItems + "<p>" + todos[i] + "</p>";
+        todoList.innerHTML = todos;
     }
 }
 
